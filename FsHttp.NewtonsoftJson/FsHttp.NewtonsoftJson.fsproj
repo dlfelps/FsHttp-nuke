@@ -1,0 +1,28 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFrameworks>netstandard2.0;netstandard2.1;net5.0;net6.0</TargetFrameworks>
+    <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
+    <Configurations>Debug;Release</Configurations>
+    <DisableImplicitFSharpCoreReference>true</DisableImplicitFSharpCoreReference>
+  </PropertyGroup>
+  <PropertyGroup>
+    <Description>JSON.Net (Newtonsoft.Json) integration package for FsHttp</Description>
+    <PackageId>FsHttp.NewtonsoftJson</PackageId>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="GlobalConfig.fs" />
+    <Compile Include="Response.fs" />
+    <Compile Include="Operators.fs" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="FSharp.Core" Version="5.0.0" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\..\README.md" Pack="true" PackagePath="\" />
+    <None Include="..\docs\img\logo_small.png" Pack="true" PackagePath="\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\FsHttp\FsHttp.fsproj" />
+  </ItemGroup>
+</Project>
